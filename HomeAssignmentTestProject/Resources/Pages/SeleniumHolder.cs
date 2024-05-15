@@ -8,7 +8,7 @@ namespace HomeAssignmentTestProject.Resources.Pages
     {
         private IWebDriver? _driver;
 
-        public static SeleniumHolder Instance { get; } = new SeleniumHolder();
+        public static SeleniumHolder Instance { get; } = new();
 
         public IWebDriver? Driver
         {
@@ -30,9 +30,12 @@ namespace HomeAssignmentTestProject.Resources.Pages
         public void CloseBrowser()
         {
             if (_driver is null) return;
+
             _driver.Quit();
+            _driver.Close();
             _driver = null;
         }
     }
+
 }
 
