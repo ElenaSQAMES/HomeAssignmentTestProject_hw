@@ -26,6 +26,9 @@ namespace HomeAssignmentTestProject.Tests
 
             Assert.That(notFoundInUi, Is.Empty,
                 $"Word occurrences from API call not found in UI parsing:{Environment.NewLine}{string.Join(Environment.NewLine, notFoundInUi)}");
+            Thread.Sleep(2000);
+            SeleniumHolder.Instance.CloseBrowser();
+                
         }
     }
 }

@@ -30,9 +30,7 @@ namespace HomeAssignmentTestProject.Resources.Pages
         public void CloseBrowser()
         {
             if (_driver is null) return;
-
-            _driver.Quit();
-            _driver.Close();
+           _driver?.Quit();
             _driver = null;
         }
     }
