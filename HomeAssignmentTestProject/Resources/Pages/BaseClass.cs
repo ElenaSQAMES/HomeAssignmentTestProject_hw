@@ -16,10 +16,7 @@ public class BaseClass
         _driver = driver;
     }
 
-    protected BaseClass()
-    {
-        throw new NotImplementedException();
-    }
+    
 
     [SetUp]
     public void SetUp()
